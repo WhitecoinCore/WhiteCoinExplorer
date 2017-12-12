@@ -68,24 +68,24 @@ block content
       if error !== null        
         .alert.alert-danger.alert-dismissable(role='alert')
           button.close(type='button', data-dismiss='alert') ×
-          strong #{settings.locale.ex_error} : #{error}
+          strong #{lan.ex_error} : #{error}
       if warning !== null        
         .alert.alert-warning.alert-dismissable(role='alert')
           button.close(type='button', data-dismiss='alert') ×
-          strong #{settings.locale.ex_warning} #{warning}
+          strong #{lan.ex_warning} #{warning}
   
   .col-md-12
     .panel.panel-default
       .panel-heading
-        strong #{settings.locale.ex_latest_transactions}
+        strong #{lan.ex_latest_transactions}
       table#recent-table.table.table-bordered.table-striped
         thead
           tr
-            th.text-center #{settings.locale.ex_block}
-            th.hidden-xs.text-center #{settings.locale.tx_hash}
-            th.hidden-xs.text-center #{settings.locale.tx_recipients}
-            th.text-center #{settings.locale.mkt_amount} (#{settings.symbol})
-            th.text-center #{settings.locale.timestamp}
+            th.text-center #{lan.ex_block}
+            th.hidden-xs.text-center #{lan.tx_hash}
+            th.hidden-xs.text-center #{lan.tx_recipients}
+            th.text-center #{lan.mkt_amount} (#{settings.symbol})
+            th.text-center #{lan.timestamp}
         tbody.text-center
     .footer-padding
       
