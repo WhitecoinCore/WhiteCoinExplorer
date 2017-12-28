@@ -10,10 +10,10 @@
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "Darkcoin",
+  "coin": "Whitecoin",
 
   // coin symbol
-  "symbol": "DRK",
+  "symbol": "XWC",
 
   // logo
   "logo": "/images/logo.png",
@@ -143,7 +143,8 @@
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
   // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
-  "nethash": "getnetworkhashps",
+  // netstakeweight: uses getstakinginfo.netstakeweight
+  "nethash": "netstakeweight",
 
   // nethash unitd: sets nethash API return units
   // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)

@@ -151,18 +151,21 @@ html
         .col-md-2.col-md-offset-1
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              if settings.nethash_units == 'K'
-                strong #{lan.network} (KH/s)
-              else if settings.nethash_units == 'M'
-                strong #{lan.network} (MH/s)
-              else if settings.nethash_units == 'G'
-                strong #{lan.network} (GH/s)
-              else if settings.nethash_units == 'T'
-                strong #{lan.network} (TH/s)
-              else if settings.nethash_units == 'P'
-                strong #{lan.network} (PH/s)
-              else if settings.nethash_units == 'H'
-                strong #{lan.network} (H/s)
+              if settings.nethash == 'netstakeweight'
+                strong #{lan.stakingweight}
+              else
+                  if settings.nethash_units == 'K'
+                    strong #{lan.network} (KH/s)
+                  else if settings.nethash_units == 'M'
+                    strong #{lan.network} (MH/s)
+                  else if settings.nethash_units == 'G'
+                    strong #{lan.network} (GH/s)
+                  else if settings.nethash_units == 'T'
+                    strong #{lan.network} (TH/s)
+                  else if settings.nethash_units == 'P'
+                    strong #{lan.network} (PH/s)
+                  else if settings.nethash_units == 'H'
+                    strong #{lan.network} (H/s)
             .panel-body
               if settings.index.difficulty == 'Hybrid'
                label#hashrate - 
