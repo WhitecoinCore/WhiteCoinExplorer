@@ -14,6 +14,18 @@ var express = require('express')
 
 var app = express();
 
+var session = require('express-session');
+app.use(session({
+    secret: 'recommend 128 bytes random string',
+    cookie: {maxAge: 3600 * 1000},
+    resave:false,
+    saveUninitialized:true
+}))
+
+var language = require('./models/language');    //多语言
+var internation = new language();
+internation.set(app);
+
 // bitcoinapi
 bitcoinapi.setWalletDetails(settings.wallet);
 if (settings.heavy != true) {

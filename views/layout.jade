@@ -7,8 +7,9 @@ html
     link(rel='stylesheet', href='//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.css')
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='/javascripts/jquery.min.js')
     script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    script(src='//cdn.bootcss.com/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js')
     script(src='/vendor/jqplot/jquery.jqplot.min.js')
     script(src='/vendor/jqplot/plugins/jqplot.dateAxisRenderer.min.js')
     script(src='/vendor/jqplot/plugins/jqplot.ohlcRenderer.min.js')
@@ -94,54 +95,74 @@ html
             li#home
               a.navbar-link(href='/') 
                 span.glyphicon.glyphicon-search
-                span.menu-text #{settings.locale.menu_explorer}
+                span.menu-text #{lan.menu_explorer}
             if settings.heavy == true
               li#reward
                 a.navbar-link(href='/reward')
                   span.fa.fa-star
-                  span.menu-text #{settings.locale.menu_reward}
+                  span.menu-text #{lan.menu_reward}
             if settings.display.movement == true
               li#movement 
                 a.navbar-link.loading(href='/movement') 
                   span.fa.fa-money
-                  span.menu-text #{settings.locale.menu_movement}
+                  span.menu-text #{lan.menu_movement}
             if settings.display.network == true
               li#network
                 a.navbar-link(href='/network')
                   span.fa.fa-share-alt
-                  span.menu-text #{settings.locale.menu_network}
+                  span.menu-text #{lan.menu_network}
             if settings.display.richlist == true
               li#richlist
                 a.navbar-link(href='/richlist')
                   span.fa.fa-btc
-                  span.menu-text #{settings.locale.menu_richlist}
+                  span.menu-text #{lan.menu_richlist}
             if settings.display.markets == true
               li#markets
                 a.navbar-link.loading(href='/markets/#{settings.markets.default}') 
                   span.fa.fa-line-chart
-                  span.menu-text #{settings.locale.menu_markets}
+                  span.menu-text #{lan.menu_markets}
             if settings.display.api == true
               li#info
                 a.navbar-link(href='/info')
                   span.glyphicon.glyphicon-info-sign
-                  span.menu-text #{settings.locale.menu_api}
+                  span.menu-text #{lan.menu_api}
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown
+              a.dropdown-toggle(href="/language", data-toggle="dropdown",data-hover="dropdown" ,data-close-others="false", role="button")
+                if (check_lan() == 'eng')
+                  img(src="/images/en_US.png")
+                  span.menu-text EN
+                  span.caret
+                 else
+                   img(src="/images/zh_CN.png")
+                   span.menu-text ZH
+                    span.caret
+              ul.dropdown-menu(style="min-width: 70px;",role="menu")
+                li
+                  a(href="/language")
+                    if (check_lan() == 'eng')
+                      img(src="/images/zh_CN.png")
+                      span.menu-text ZH
+                    else
+                      img(src="/images/en_US.png")
+                      span.menu-text EN
     .col-md-12
       .row.text-center
         .col-md-2.col-md-offset-1
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
               if settings.nethash_units == 'K'
-                strong #{settings.locale.network} (KH/s)
+                strong #{lan.network} (KH/s)
               else if settings.nethash_units == 'M'
-                strong #{settings.locale.network} (MH/s)
+                strong #{lan.network} (MH/s)
               else if settings.nethash_units == 'G'
-                strong #{settings.locale.network} (GH/s)
+                strong #{lan.network} (GH/s)
               else if settings.nethash_units == 'T'
-                strong #{settings.locale.network} (TH/s)
+                strong #{lan.network} (TH/s)
               else if settings.nethash_units == 'P'
-                strong #{settings.locale.network} (PH/s)
+                strong #{lan.network} (PH/s)
               else if settings.nethash_units == 'H'
-                strong #{settings.locale.network} (H/s)
+                strong #{lan.network} (H/s)
             .panel-body
               if settings.index.difficulty == 'Hybrid'
                label#hashrate - 
@@ -152,7 +173,7 @@ html
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              strong #{settings.locale.difficulty}
+              strong #{lan.difficulty}
             .panel-body
               if settings.index.difficulty == 'Hybrid'
                label#difficulty -
@@ -165,7 +186,7 @@ html
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              strong #{settings.locale.ex_supply} (#{settings.symbol})
+              strong #{lan.ex_supply} (#{settings.symbol})
             .panel-body
               if settings.index.difficulty == 'Hybrid'
                label#supply - 
@@ -188,8 +209,8 @@ html
       .row.text-center(style='margin-top:10px;margin-bottom:20px;')
         form.form-inline(method='post', action='/search')      
           #index-search.form-group
-            input.form-control(type='text', name='search', placeholder='#{settings.locale.ex_search_message}', style='min-width:80%;margin-right:5px;')
-            button.btn.btn-success(type='submit') #{settings.locale.ex_search_button}
+            input.form-control(type='text', name='search', placeholder='#{lan.ex_search_message}', style='min-width:80%;margin-right:5px;')
+            button.btn.btn-success(type='submit') #{lan.ex_search_button}
     block content
     .navbar.navbar-default.navbar-fixed-bottom.hidden-xs
       .col-md-4

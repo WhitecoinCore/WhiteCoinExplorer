@@ -4,38 +4,38 @@ block content
   .col-md-12.col-xs-12
     .panel.panel-default
       .panel-heading
-        strong #{settings.locale.api_title}
+        strong #{lan.api_title}
       .panel-body
         :markdown
-          *#{settings.locale.api_message}*
+          *#{lan.api_message}*
           
           ------
 
-          ### #{settings.locale.api_calls}
+          ### #{lan.api_calls}
           *Return data from coind*
 
           *  **getdifficulty**  
-             *#{settings.locale.api_getdifficulty}*  
+             *#{lan.api_getdifficulty}*
              [#{address}/api/getdifficulty](/api/getdifficulty)   
 
           *  **getconnectioncount**  
-             *#{settings.locale.api_getconnectioncount}*  
+             *#{lan.api_getconnectioncount}*
              [#{address}/api/getconnectioncount](/api/getconnectioncount) 
 
           *  **getblockcount**  
-             *#{settings.locale.api_getblockcount}*  
+             *#{lan.api_getblockcount}*
              [#{address}/api/getblockcount](/api/getblockcount)
 
           *  **getblockhash [index]**  
-             *#{settings.locale.api_getblockhash}*  
+             *#{lan.api_getblockhash}*
              [#{address}/api/getblockhash?index=#{hashes.blockindex}](/api/getblockhash?index=#{hashes.blockindex})
 
           *  **getblock [hash]**  
-             *#{settings.locale.api_getblock}*  
+             *#{lan.api_getblock}*
              [#{address}/api/getblock?hash=#{hashes.blockhash}](/api/getblock?hash=#{hashes.blockhash})
 
           *  **getrawtransaction [txid] [decrypt]**  
-             *#{settings.locale.api_getrawtransaction}*  
+             *#{lan.api_getrawtransaction}*
              [#{address}/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=0](/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=0)  
              [#{address}/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=1](/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=1)
         
@@ -43,7 +43,7 @@ block content
         if settings.index.show_hashrate == true
           :markdown
             *  **getnetworkhashps**  
-               *#{settings.locale.api_getnetworkhashps}*  
+               *#{lan.api_getnetworkhashps}*
                [#{address}/api/getnetworkhashps](/api/getnetworkhashps)
 
 
@@ -51,35 +51,35 @@ block content
         if settings.heavy == true
           :markdown
             *  **getmaxmoney**  
-               *#{settings.locale.api_getmaxmoney}*  
+               *#{lan.api_getmaxmoney}*
                [#{address}/api/getmaxmoney](/api/getmaxmoney)
             
             *  **getmaxvote**  
-               *#{settings.locale.api_getmaxvote}*  
+               *#{lan.api_getmaxvote}*
                [#{address}/api/getmaxvote](/api/getmaxvote)
 
             *  **getvote**  
-               *#{settings.locale.api_getvote}*  
+               *#{lan.api_getvote}*
                [#{address}/api/getvote](/api/getvote)
 
             *  **getphase**  
-               *#{settings.locale.api_getphase}*  
+               *#{lan.api_getphase}*
                [#{address}/api/getphase](/api/getphase)
 
             *  **getreward**  
-               *#{settings.locale.api_getreward}*  
+               *#{lan.api_getreward}*
                [#{address}/api/getreward](/api/getreward)
 
             *  **getsupply**  
-               *#{settings.locale.api_getsupply}*  
+               *#{lan.api_getsupply}*
                [#{address}/api/getsupply](/api/getsupply)  
 
             *  **getnextrewardestimate**  
-               *#{settings.locale.api_getnextrewardestimate}*  
+               *#{lan.api_getnextrewardestimate}*
                [#{address}/api/getnextrewardestimate](/api/getnextrewardestimate)
 
             *  **getnextrewardwhenstr**  
-               *#{settings.locale.api_getnextrewardwhenstr}*  
+               *#{lan.api_getnextrewardwhenstr}*
                [#{address}/api/getnextrewardwhenstr](/api/getnextrewardwhenstr)                                                       
 
         :markdown
