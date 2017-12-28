@@ -1,3 +1,9 @@
+1.6.2
+* Remove rewards
+* Add network staking information
+* Additional translation options
+* Translation flags
+
 1.6.1
 * fixed last_txs setting
 * added hashrate_units setting
