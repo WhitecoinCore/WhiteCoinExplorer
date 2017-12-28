@@ -47,7 +47,7 @@ if (settings.heavy != true) {
   bitcoinapi.setAccess('only', ['getinfo', 'getstakinginfo', 'getnetworkhashps', 'getdifficulty', 'getconnectioncount',
     'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction','getmaxmoney', 'getvote',
     'getmaxvote', 'getphase', 'getreward', 'getnextrewardestimate', 'getnextrewardwhenstr',
-    'getnextrewardwhensec', 'getsupply', 'gettxoutsetinfo', 'getstakinginfo']);
+    'getnextrewardwhensec', 'getsupply', 'gettxoutsetinfo', 'getstakinginfo', 'getpeerinfo']);
 }
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
