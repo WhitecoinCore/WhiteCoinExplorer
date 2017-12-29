@@ -5,15 +5,15 @@
 */
 {
   // name your instance!
-  "title": "IQUIDUS",
+  "title": "Whitecoin Block Explorer",
 
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "Darkcoin",
+  "coin": "Whitecoin",
 
   // coin symbol
-  "symbol": "DRK",
+  "symbol": "XWC",
 
   // logo
   "logo": "/images/logo.png",
@@ -26,7 +26,7 @@
   //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
   //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
-  "theme": "Cyborg",
+  "theme": "Yeti",
 
   // port to listen for requests on.
   "port" : 3001,
@@ -47,13 +47,13 @@
   // wallet settings
   "wallet": {
     "host": "localhost",
-    "port": 9332,
-    "user": "darkcoinrpc",
+    "port": 15815,
+    "user": "whitecoinrpc",
     "pass": "123gfjk3R3pCCVjHtbRde2s5kzdf233sa"
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 10,
 
   // language settings
   "locale": "locale/en.json",
@@ -74,7 +74,7 @@
   // index page (valid options for difficulty are POW, POS or Hybrid)
   "index": {
     "show_hashrate": true,
-    "difficulty": "POW",
+    "difficulty": "POS",
     "last_txs": 100
   },
 
@@ -90,11 +90,9 @@
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "JBS",
+    "coin": "XWC",
     "exchange": "BTC",
     "enabled": ["bittrex"],
-    "cryptopia_id": "1658",
-    "ccex_key" : "Get-Your-Own-Key",
     "default": "bittrex"
   },
 
@@ -109,28 +107,28 @@
   // low flag: greater than this value flagged yellow
   // high flag: greater than this value flagged red
   "movement": {
-    "min_amount": 100,
-    "low_flag": 1000,
-    "high_flag": 5000
+    "min_amount": 100000,
+    "low_flag": 100000,
+    "high_flag": 1000000
   },
 
   // twitter, facebook, googleplus
-  "twitter": "iquidus",
+  "twitter": "whitecoiner",
   "facebook": "yourfacebookpage",
   "googleplus": "yourgooglepluspage",
 
   //genesis
-  "genesis_tx": "65f705d2f385dc85763a317b3ec000063003d6b039546af5d8195a5ec27ae410",
-  "genesis_block": "b2926a56ca64e0cd2430347e383f63ad7092f406088b9b86d6d68c2a34baef51",
+  "genesis_tx": "30feb44d2592d6aac426059a9e676158404b48644502fb8440c00bf1897f43e2",
+  "genesis_block": "750129f3369574f0c397e28273cc5e795f5a78d3c43eba4b58583bac96e62e18",
 
   //heavy (enable/disable additional heavy features)
-  "heavy": false,
+  "heavy": true,
 
   //amount of txs to index per address (stores latest n txs)
   "txcount": 100,
 
   //show total sent & received on address page (set false if PoS)
-  "show_sent_received": true,
+  "show_sent_received": false,
 
   // how to calculate current coin supply
   // COINBASE : total sent from coinbase (PoW)
@@ -143,7 +141,8 @@
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
   // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
-  "nethash": "getnetworkhashps",
+  // netstakeweight: uses getstakinginfo.netstakeweight
+  "nethash": "netstakeweight",
 
   // nethash unitd: sets nethash API return units
   // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
