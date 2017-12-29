@@ -194,13 +194,10 @@ router.get('/network', function(req, res) {
   res.render('network', {active: 'network'});
 });
 
-<<<<<<< HEAD
 router.get('/reward', function(req, res){
   res.render('reward', { active: 'reward'});
 });
 
-=======
->>>>>>> 92326ecdeb28e8411d77b22221fd5485bcfe124a
 router.get('/tx/:txid', function(req, res) {
   route_get_tx(res, req.param('txid'));
 });

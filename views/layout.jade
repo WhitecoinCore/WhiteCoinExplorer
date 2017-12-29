@@ -96,6 +96,11 @@ html
               a.navbar-link(href='/') 
                 span.glyphicon.glyphicon-search
                 span.menu-text #{lan.menu_explorer}
+            if settings.display.reward == true
+              li#reward
+                a.navbar-link.loading(href='/reward')
+                  span.fa.fa-money
+                  span.menu-text #{lan.heavy_title}
             if settings.display.movement == true
               li#movement 
                 a.navbar-link.loading(href='/movement') 

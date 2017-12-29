@@ -48,7 +48,7 @@ internation.prototype.languagePacks = {
             // global
             "difficulty": "难度系数",
             "network": "网络",
-            "stakingweight": "Staking Weight",
+            "stakingweight": "网络权重",
             "height": "高度",
             "timestamp": "时间戳",
             "size": "尺寸",
