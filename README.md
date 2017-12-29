@@ -1,16 +1,12 @@
-Iquidus Explorer - 1.6.1
+Whitecoin Explorer - 1.6.2
 ================
 
-An open source block explorer written in node.js.
+An open source block explorer for Hush written in node.js based on [Iquidus Explorer - 1.6.1](https://github.com/iquidus/explorer)
 
 ### See it in action
 
-*  [Jumbucks](http://explorer.getjumbucks.com)
-*  [Sphere](http://sphere.iquidus.io)
-*  [SAR](http://explorer.sarcoin.info)
-*  [Vanillacoin](https://blockchain.vanillacoin.net/)
-*  [Neoscoin](http://explorer.infernopool.com/)  
-*  [C2Chain](http://c2chain.info/)
+*  [Whitecoin](http://explorer2.whitecoin.info)
+
 
 *note: If you would like your instance mentioned here contact me*
 
@@ -18,7 +14,7 @@ An open source block explorer written in node.js.
 
 *  node.js >= 0.10.28
 *  mongodb 2.6.x
-*  *coind
+*  whitecoind
 
 ### Create database
 
@@ -106,8 +102,7 @@ Iquidus Explorer is intended to be generic so it can be used with any wallet fol
 
 ### Donate
 
-    BTC: 168hdKA3fkccPtkxnX8hBrsxNubvk4udJi
-    JBS: JZp9893FMmrm1681bDuJBU7c6w11kyEY7D
+    XWC: WdPskLzGkjXkSns3BgkRF5fW5SveTBS7tR
 
 ### Known Issues
 
@@ -137,6 +132,7 @@ Where [SIZE] is an integer higher than the default.
 
 ### License
 
+Copyright (c) 2017, Oizopower  
 Copyright (c) 2015, Iquidus Technology  
 Copyright (c) 2015, Luke Williams  
 All rights reserved.
