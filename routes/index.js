@@ -194,6 +194,10 @@ router.get('/network', function(req, res) {
   res.render('network', {active: 'network'});
 });
 
+router.get('/reward', function(req, res){
+  res.render('reward', { active: 'reward'});
+});
+
 router.get('/tx/:txid', function(req, res) {
   route_get_tx(res, req.param('txid'));
 });

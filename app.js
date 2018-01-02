@@ -112,6 +112,12 @@ app.use('/ext/getlasttxs/:min', function(req,res){
   });
 });
 
+app.use('/ext/getlastreward', function(req,res){
+  db.get_last_txs_reward(settings.index.last_txs, function(txs){
+    res.send({data: txs});
+    });
+});
+
 app.use('/ext/connections', function(req,res){
   db.get_peers(function(peers){
     res.send({data: peers});

@@ -48,7 +48,7 @@ internation.prototype.languagePacks = {
             // global
             "difficulty": "难度系数",
             "network": "网络",
-            "stakingweight": "Staking Weight",
+            "stakingweight": "网络权重",
             "height": "高度",
             "timestamp": "时间戳",
             "size": "尺寸",
@@ -140,7 +140,7 @@ internation.prototype.languagePacks = {
             "ccex": "C-Cex",
 
             // Heavy rewards view
-            "heavy_title": "奖励/捐赠信息",
+            "heavy_title": "挖矿所得",
             "heavy_vote": "捐款",
             "heavy_cap": "Coin Cap",
             "heavy_phase": "Phase",
@@ -151,6 +151,7 @@ internation.prototype.languagePacks = {
             "heavy_changein": "奖励变化约为",
             "heavy_key": "Key",
             "heavy_lastxvotes": "最近20天捐款数据"
+
         }
     },
     eng: {
@@ -291,7 +292,7 @@ internation.prototype.languagePacks = {
             "ccex": "C-Cex",
 
             // Heavy rewards view
-            "heavy_title": "Reward/voting information",
+            "heavy_title": "Reward",
             "heavy_vote": "Vote",
             "heavy_cap": "Coin Cap",
             "heavy_phase": "Phase",
