@@ -34,6 +34,7 @@ html
             $("#lastPrice").text(json.data[0].lastPrice.toFixed(8));
             $("#lblConnections").text(json.data[0].connections + ' connections');
             $("#lblBlockcount").text(json.data[0].blockcount + ' blocks');
+            $("#lblBlocks").text(json.data[0].blockcount);
             $("#lblX1").text(' ');
           }});
         }
@@ -101,6 +102,11 @@ html
                 a.navbar-link.loading(href='/reward')
                   span.fa.fa-money
                   span.menu-text #{lan.heavy_title}
+            if settings.display.blocks == true
+              li#blocks
+                a.navbar-link.loading(href='/blocks')
+                  span.fa.fa-th-large
+                  span.menu-text #{lan.heavy_blocks}
             if settings.display.movement == true
               li#movement 
                 a.navbar-link.loading(href='/movement') 
@@ -151,39 +157,34 @@ html
         .col-md-2.col-md-offset-1
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              if settings.nethash == 'netstakeweight'
-                strong #{lan.stakingweight}
-              else
-                  if settings.nethash_units == 'K'
-                    strong #{lan.network} (KH/s)
-                  else if settings.nethash_units == 'M'
-                    strong #{lan.network} (MH/s)
-                  else if settings.nethash_units == 'G'
-                    strong #{lan.network} (GH/s)
-                  else if settings.nethash_units == 'T'
-                    strong #{lan.network} (TH/s)
-                  else if settings.nethash_units == 'P'
-                    strong #{lan.network} (PH/s)
-                  else if settings.nethash_units == 'H'
-                    strong #{lan.network} (H/s)
+              strong #{lan.heavy_blocks}
             .panel-body
-              if settings.index.difficulty == 'Hybrid'
-               label#hashrate - 
-               <br>
-               label#lblX1  
-              else  
-               label#hashrate - 
+              label#lblBlocks -
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              strong #{lan.difficulty}
-            .panel-body
-              if settings.index.difficulty == 'Hybrid'
-               label#difficulty -
-               <br>
-               label#difficultyHybrid -
+              if settings.nethash == 'netstakeweight'
+                strong #{lan.stakingweight}
               else
-               label#difficulty -
+                if settings.nethash_units == 'K'
+                  strong #{lan.network} (KH/s)
+                else if settings.nethash_units == 'M'
+                  strong #{lan.network} (MH/s)
+                else if settings.nethash_units == 'G'
+                  strong #{lan.network} (GH/s)
+                else if settings.nethash_units == 'T'
+                  strong #{lan.network} (TH/s)
+                else if settings.nethash_units == 'P'
+                  strong #{lan.network} (PH/s)
+                else if settings.nethash_units == 'H'
+                  strong #{lan.network} (H/s)
+            .panel-body
+             if settings.index.difficulty == 'Hybrid'
+               label#hashrate -
+               <br>
+               label#lblX1
+              else
+               label#hashrate -
         .col-md-2.col-sm-12
           img(src='#{settings.logo}', style='margin-top:-15px;height:128px;')
         .col-md-2

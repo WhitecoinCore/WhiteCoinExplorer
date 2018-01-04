@@ -69,7 +69,8 @@
     "search": true,
     "movement": true,
     "network": true,
-    "reward": true
+    "reward": false,
+    "blocks": true
   },
 
   // index page (valid options for difficulty are POW, POS or Hybrid)

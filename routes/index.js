@@ -198,6 +198,10 @@ router.get('/reward', function(req, res){
   res.render('reward', { active: 'reward'});
 });
 
+router.get('/blocks', function(req, res){
+    res.render('blocks', { active: 'blocks'});
+});
+
 router.get('/tx/:txid', function(req, res) {
   route_get_tx(res, req.param('txid'));
 });
