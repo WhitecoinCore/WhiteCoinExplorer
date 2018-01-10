@@ -13,14 +13,8 @@ var express = require('express')
   , request = require('request');
 
 var app = express();
-
-var session = require('express-session');
-app.use(session({
-    secret: 'recommend 128 bytes random string',
-    cookie: {maxAge: 3600 * 1000},
-    resave:false,
-    saveUninitialized:true
-}))
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 var language = require('./models/language');    //多语言
 var internation = new language();
