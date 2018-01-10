@@ -325,10 +325,10 @@ internation.prototype.set = function (app) {
         //这个是示例，定义一个动态视图助手变量
 
         //如果有语言设置，则设置为对应的语言，否则，设置为中文；
-        res.locals = self.getPacks(req.session.language)
+        res.locals = self.getPacks(req.cookies.selected_lan)
         //下面两个因为要调用req和res，所以特殊设置
         res.locals.check_lan = function () {
-            if (!('language' in req.session) || req.session.language === 'eng')
+            if (!(req.cookies.selected_lan) || req.cookies.selected_lan === 'eng')
                 return "eng";
             else
                 return "zh_cn";

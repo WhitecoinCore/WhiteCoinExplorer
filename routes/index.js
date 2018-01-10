@@ -301,10 +301,10 @@ router.get('/ext/summary', function(req, res) {
 });
 
 router.get('/language', function (req, res, next) {
-    if (!('language' in req.session) || req.session.language === 'eng')
-        req.session.language = 'zh_cn';
+    if (!(req.cookies.selected_lan) || req.cookies.selected_lan === 'eng')
+        res.cookie("selected_lan", 'zh_cn', {maxAge: 30*24*3600*1000});
     else
-        req.session.language = 'eng';
+      res.cookie("selected_lan", 'eng', {maxAge: 30*24*3600*1000});
     res.redirect('/');
 });
 module.exports = router;
