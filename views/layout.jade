@@ -135,23 +135,48 @@ html
           ul.nav.navbar-nav.navbar-right
             li.dropdown
               a.dropdown-toggle(href="/language", data-toggle="dropdown",data-hover="dropdown" ,data-close-others="false", role="button")
-                if (check_lan() == 'eng')
+                if (check_lan() == 'en_us')
                   img(src="/images/en_US.png")
                   span.menu-text EN
-                  span.caret
-                 else
+                   span.caret
+                else if (check_lan() == 'ja_jp')
+                  img(src="/images/jp_JA.png")
+                  span.menu-text JP
+                   span.caret
+                else if (check_lan() == 'th_th')
+                  img(src="/images/th_TH.png")
+                  span.menu-text TH
+                   span.caret
+                else if (check_lan() == 'ru_ru')
+                  img(src="/images/ru_RU.png")
+                  span.menu-text RU
+                   span.caret
+                else
                    img(src="/images/zh_CN.png")
                    span.menu-text ZH
                     span.caret
               ul.dropdown-menu(style="min-width: 70px;",role="menu")
                 li
-                  a(href="/language")
-                    if (check_lan() == 'eng')
-                      img(src="/images/zh_CN.png")
-                      span.menu-text ZH
-                    else
+                  if (check_lan() != 'en_us')
+                    a(href="/language/en_us")
                       img(src="/images/en_US.png")
                       span.menu-text EN
+                  if (check_lan() != 'zh_cn')
+                    a(href="/language/zh_cn")
+                      img(src="/images/zh_CN.png")
+                      span.menu-text ZH
+                  if (check_lan() != 'ja_jp')
+                    a(href="/language/ja_jp")
+                      img(src="/images/jp_JA.png")
+                      span.menu-text JP
+                  if (check_lan() != 'th_th')
+                    a(href="/language/th_th")
+                      img(src="/images/th_TH.png")
+                      span.menu-text TH
+                  if (check_lan() != 'ru_ru')
+                    a(href="/language/ru_ru")
+                      img(src="/images/ru_RU.png")
+                      span.menu-text RU
     .col-md-12
       .row.text-center
         .col-md-2.col-md-offset-1

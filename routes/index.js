@@ -304,11 +304,12 @@ router.get('/ext/summary', function(req, res) {
   });
 });
 
-router.get('/language', function (req, res, next) {
-    if (!(req.cookies.selected_lan) || req.cookies.selected_lan === 'eng')
-        res.cookie("selected_lan", 'zh_cn', {maxAge: 30*24*3600*1000});
-    else
-      res.cookie("selected_lan", 'eng', {maxAge: 30*24*3600*1000});
+router.get('/language/:string', function (req, res, next) {
+    if (req.param('string')) {
+        res.cookie("selected_lan", req.param('string'), {maxAge: 30*24*3600*1000});
+    } else {
+        res.cookie("selected_lan", 'en_us', {maxAge: 30*24*3600*1000});
+    }
     res.redirect('/');
 });
 module.exports = router;
