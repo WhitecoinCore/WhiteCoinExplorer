@@ -125,6 +125,8 @@ app.set('coin', settings.coin);
 app.set('locale', locale);
 app.set('display', settings.display);
 app.set('markets', settings.markets);
+app.set('facebook', settings.facebook);
+app.set('discord', settings.discord);
 app.set('twitter', settings.twitter);
 app.set('genesis_block', settings.genesis_block);
 app.set('index', settings.index);

@@ -253,6 +253,11 @@ html
             li.pull-left
               a#facebook-icon(href="https://www.facebook.com/#{settings.facebook}", target='_blank')
                 span.glyphicon.fa.fa-facebook
+        if settings.display.discord
+          ul.nav.navbar-nav
+            li.pull-left
+              a#discord-icon(href="https://discord.gg/#{settings.discord}", target='_blank')
+                span.glyphicon.fa.fa-comments
         if settings.display.googleplus
           ul.nav.navbar-nav
             li.pull-left

@@ -65,6 +65,7 @@
     "richlist": true,
     "twitter": true,
     "facebook": false,
+    "discord": false,
     "googleplus": false,
     "search": true,
     "movement": true,
@@ -117,6 +118,7 @@
   // twitter, facebook, googleplus
   "twitter": "whitecoiner",
   "facebook": "yourfacebookpage",
+  "discord": "inviteurl",
   "googleplus": "yourgooglepluspage",
 
   //genesis
